@@ -1,0 +1,47 @@
+{
+	"name": "mif-main",
+	"description": "Mann, Ivanov and Ferber site repo",
+	"version": "1.0.1",
+	"devDependencies": {
+		"event-stream": "3.1.5",
+		"gulp": "3.6.2",
+		"gulp-plumber": "0.6.1",
+		"gulp-sass": "0.7.1",
+		"gulp-autoprefixer": "0.0.7",
+		"gulp-minify-css": "0.3.4",
+		"gulp-concat": "2.2.0",
+		"gulp-util": "2.2.14",
+		"gulp-uglify": "0.3.0",
+		"gulp-clean": "0.2.4",
+		"gulp-rename": "1.2.0",
+		"ejs": "1.0.0",
+		"docular": "0.7.3",
+        "js-string-escape": "1.0.0",
+		"through2": "0.4.2",
+		"sqlite3": "2.2.3",
+		"image-min": "0.4.5",
+		"object-assign": "0.3.0",
+		"pretty-bytes": "0.1.0",
+		"glob-stream": "3.1.9",
+		"glob": "4.0.0",
+		"karma": "0.12.16",
+		"karma-chrome-launcher": "0.1.4",
+		"karma-phantomjs-launcher": "0.1.4",
+		"karma-jasmine": "0.1.5",
+		"yargs": "1.2.5",
+        "async": "0.9.0"
+	},
+	"repository": {
+	},
+	"scripts": {
+		"site-img-minify": "./node_modules/gulp/bin/gulp.js images --min --path assets/templates/site/img/ --clean",
+		"site-img-minify-check": "./front/cli/isImagesMinified.js --path assets/templates/site/img/ --verbose",
+
+		"build-dev": "./node_modules/gulp/bin/gulp.js build --watch",
+
+		"frontend-unit-tests": "./node_modules/karma/bin/karma start front/tests/units/newBook.conf.js",
+
+		"generate-doc": "./node_modules/gulp/bin/gulp.js generate-doc"
+
+	}
+}
